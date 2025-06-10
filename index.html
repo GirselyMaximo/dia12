@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Para Minha Namorada</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('fundo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            padding: 10px;
+            overflow: hidden;
+        }
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.8); /* Ajustado para branco translúcido */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            overflow: hidden;
+            margin: 20px 0;
+            padding: 20px;
+        }
+        .photo {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+        .music-player {
+            margin: 15px 0;
+        }
+        .message {
+            padding: 20px;
+            font-size: 1em;
+            color: #000; /* Alterado para preto para maior contraste */
+            overflow-y: auto;
+            max-height: 50vh;
+            line-height: 1.5;
+        }
+        footer {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: red;
+            transform: rotate(45deg);
+            animation: floatUp 5s infinite;
+        }
+        .heart:before, .heart:after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+        }
+        .heart:before {
+            top: -10px;
+            left: 0;
+        }
+        .heart:after {
+            left: 10px;
+            top: 0;
+        }
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-300px) scale(0.5);
+                opacity: 0;
+            }
+        }
+        html, body {
+            overflow-y: auto;
+        }
+        @media only screen and (max-width: 414px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+            .message {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Foto principal -->
+        <img src="sim.jpg" alt="Sua foto especial" class="photo">
+
+        <!-- Música -->
+        <div class="music-player">
+            <audio controls autoplay>
+                <source src="LEMBREI DE NÓS - João Gomes, @mestrinhooficial e @Jota.Pe.Oficial (Dominguinho).mp3" type="audio/mpeg">
+                Seu navegador não suporta o player de áudio.
+            </audio>
+        </div>
+
+        <!-- Mensagem personalizada -->
+        <div class="message">
+           Oi, amor.
+
+Nosso primeiro Dia dos Namorados. Parece clichê, mas eu desejo que seja apenas o primeiro de uma vida inteira. Quero estar com você em todas as nossas fases: crescente, minguante, nova e cheia (kkk). Quero que você continue sendo a minha estrela cadente, porque sempre que eu te vejo, faço um desejo — e, normalmente, você é o meu desejo.
+
+Falando em desejo, acho que os grandes filósofos gregos estavam errados o tempo todo. Principalmente Platão, quando disse que amamos o desejo e não o desejado. Porque, sinceramente, eu amo te desejar, e mesmo te tendo, eu amo o desejado. Incrível, né? Quebrando as estatísticas platônicas desde janeiro (kkkk).
+
+Dito isso, deixo um trecho de um poema muito atribuído a Victor Hugo, que eu gosto bastante:
+
+“Desejo primeiro que você ame,
+E que, amando, também seja amado.”
+
+É muito desejo! Já tá até tocando Desejo de Menina aqui na minha mente:
+“ENTÃO CASE-SE COMIGO NUMA NOITE DE LUARRRRR OU NA MANHÃ DE UM DOMINGO À BEIRA-MARRRRR!”
+É o destino.
+
+Você transformou todas as datas do meu calendário em especiais. Cá estou, tarde da noite (não neste momento, eu acho), sorrindo, pensando em você e te dedicando um texto que sequer escrevi à mão — mas sim, com os dedos (hehehehe). Talvez assim fique até melhor pra você ler, em fonte Arial 12.
+
+Essa música me lembra demais da gente. E ainda bem que o Dia dos Namorados é no mês de São João, porque casa certinho, certinho.
+
+Eu amo você. E tenho certeza de que esse sentimento é amor. Talvez estejamos nos reencontrando de outros ciclos, outras vidas, outras datas... Será? Talvez um dia a gente se encontre de novo, será? Sorte? Eu acho que sim. É isso aí: gastei toda a minha sorte com você. E nem lembro onde foi que eu vi isso, mas é real.
+
+Eu estarei aqui por você, em todos os momentos.
+Coisas que eu não sei lidar? Várias.
+Mas estarei com você, de um jeito ou de outro.
+
+Feliz Dia dos Namorados, meu amor.
+Feliz nosso dia.
+Feliz primeiro 12 de junho.
+        </div>
+    </div>
+
+    <footer>
+        <p> EU SÓ PRECISO DE VOCÊ 🩵</p>
+    </footer>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.style.left = `${Math.random() * 100}vw`;
+            heart.style.animationDuration = `${2 + Math.random() * 3}s`;
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+
+</body>
+</html>
